@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-i(6nt*(v-f3w_j3n8f43lq$4u(cc$#gz(z6v9ogifcgbu$9@%m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["textbooktracker.pythonanywhere.com"]
 
 
 # Application definition
