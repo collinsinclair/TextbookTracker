@@ -34,6 +34,8 @@ class Section(models.Model):
     chapter = models.ForeignKey(Chapter, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     number = models.IntegerField()
+    started = models.DateField(null=True, blank=True)
+    completed = models.DateField(null=True, blank=True)
 
     class Meta:
         unique_together = ["chapter", "number"]
@@ -45,6 +47,7 @@ class Section(models.Model):
 class Problem(models.Model):
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
     number = models.IntegerField()
+    done = models.DateField(null=True, blank=True)
 
     class Meta:
         unique_together = ["section", "number"]
