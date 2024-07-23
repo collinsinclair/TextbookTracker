@@ -39,7 +39,7 @@ class Section(models.Model):
         unique_together = ["chapter", "number"]
 
     def __str__(self):
-        return f"{self.chapter}.{self.number} {self.title}"
+        return f"{self.chapter.number}.{self.number} {self.title}"
 
 
 class Problem(models.Model):
