@@ -15,6 +15,10 @@ class Book(models.Model):
     edition = models.IntegerField()
     year = models.IntegerField()
 
+    def __str__(self):
+        authors = ", ".join([author.last_name for author in self.authors.all()])
+        return f"{authors} - {self.title} ({self.edition}e, {self.year})"
+
 
 class Chapter(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
